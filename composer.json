@@ -1,5 +1,5 @@
 {
-	"name": "cchhyy0/idcim-class",
+	"name": "cchhyy0/idcimclass",
  	"type": "library",
 	"description": "New project for idcim",
 	"keywords": ["database","idcimclass"],
@@ -14,10 +14,10 @@
 		}
 	],
 	"require": {
-		"php": ">=7.0",
+		"php": ">=7.0",  
 	},
 	"conflict": {
-		"nette/nette": "<2.2"
+		"cchhyy0/idcimclass": "<1.0"
 	},
 	"autoload": {
 		"classmap": ["idcimclass"]
