@@ -17,7 +17,7 @@ use PDOException;
  */
 class Connection
 {
-	use Cchhyy\SmartObject;
+	//use Cchhyy\SmartObject;
 
 	/** @var callable[]  function (Connection $connection); Occurs after connection is established */
 	public $onConnect;
@@ -67,15 +67,15 @@ class Connection
 			$this->pdo = new PDO($this->params[0], $this->params[1], $this->params[2], $this->options);
 			$this->pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 		} catch (PDOException $e) {
-			throw ConnectionException::from($e);
+			echo $re->getMessage();  
 		}
    
-		$class = empty($this->options['driverClass'])
-			? 'Nette\Database\Drivers\\' . ucfirst(str_replace('sql', 'Sql', $this->pdo->getAttribute(PDO::ATTR_DRIVER_NAME))) . 'Driver'
-			: $this->options['driverClass'];
-		$this->driver = new $class($this, $this->options);
-		$this->preprocessor = new SqlPreprocessor($this);
-		$this->onConnect($this);
+		// $class = empty($this->options['driverClass'])
+		// 	? 'Nette\Database\Drivers\\' . ucfirst(str_replace('sql', 'Sql', $this->pdo->getAttribute(PDO::ATTR_DRIVER_NAME))) . 'Driver'
+		// 	: $this->options['driverClass'];
+		// $this->driver = new $class($this, $this->options);
+		// $this->preprocessor = new SqlPreprocessor($this);
+		// $this->onConnect($this);
 	}
 
 
@@ -174,10 +174,10 @@ class Connection
 	 * @return ResultSet
 	 */
 	public function query($sql, ...$params)
-	{
+	{	
 		list($sql, $params) = $this->preprocess($sql, ...$params);
 		try {
-			$result = new ResultSet($this, $sql, $params);
+			$result = new Cchhyy\Database\ResultSet($this, $sql, $params);
 		} catch (PDOException $e) {
 			$this->onQuery($this, $e);
 			throw $e;
@@ -251,8 +251,14 @@ class Connection
 	 * @return array
 	 */
 	public function fetchAll($sql, ...$params)
-	{
-		return $this->query($sql, ...$params)->fetchAll();
+	{	
+		try{
+			$re=$this->pdo->query($sql);
+			return $re->fetchAll(PDO::FETCH_ASSOC);
+		}catch(PDOException $e){   
+			echo $e->getMessage();exit;
+		}
+		//return $this->query($sql, ...$params)->fetchAll();
 	}
 
 
