@@ -1,5 +1,5 @@
 {
-    "name": "cchhyy0/idcimClass",
+    "name": "cchhyy0/idcimclass",
     "type": "library",
     "description": "Logging for PHP 7.2",
     "keywords": ["log","logging"],
@@ -17,7 +17,7 @@
         "php": ">=7.0"
     },
     "autoload": {
-        "psr-0": {
+        "psr-0": {  
             "idcim": "idcimclass"   
         }
     }
