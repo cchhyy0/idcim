@@ -5,12 +5,7 @@
  * Copyright (c) 2004 David Grudl (https://davidgrudl.com)
  */
 
-namespace Cchhyy\Database;
-
-use Cchhyy;
-use PDO;
-use PDOException;
-
+namespace idcim\Database\Connection;
 
 /**
  * Represents a connection between PHP and a database server.
