@@ -16,7 +16,12 @@ use PDOException;
 class Pdosql
 {
 		
-
+	private $host;
+	private $user;
+	private $password;
+	private $database;
+	private $conn;
+	private $sql_error = true;
 	//构造函数
 	public function __construct($host,$port,$user,$password,$database,$conn,$charset,$prefix){
      	$this->prefix=$prefix;   
