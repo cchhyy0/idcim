@@ -13,12 +13,12 @@
 			"role": "Developer"	
 		}
 	],
-	"minimum-stability": "dev",  
+	"version":"1.0.0",     
 	"require": {
 		"php": ">=7.0"      
 	},
 	"autoload": {
 		"classmap": ["idcimclass"]
 	}
-   
+
 }     
