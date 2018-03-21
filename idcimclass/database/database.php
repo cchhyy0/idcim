@@ -18,8 +18,7 @@ class Pdosql
 		
 
 	//构造函数
-	public function __construct(){
-		echo $host;exit;
+	public function __construct($host,$port,$user,$password,$database,$conn,$charset,$prefix){
      	$this->prefix=$prefix;
      	$this->database=$database;
 		$dsn="mysql:dbname=$database;host=$host;port:$port";
