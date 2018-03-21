@@ -5,7 +5,7 @@
  * Copyright (c) 2004 David Grudl (https://davidgrudl.com)
  */
 
-namespace idcim\Database\Connection;
+namespace idcimclass\Database;   
 
 /**
  * Represents a connection between PHP and a database server.
