@@ -1,5 +1,5 @@
 {
-	"name": "idcim/idcimclass",
+	"name": "idcim/lib",
  	"type": "library",
 	"description": "New project for idcim",
 	"keywords": ["database","idcimclass"],
@@ -13,15 +13,12 @@
 			"role": "Developer"	
 		}
 	],
-	"version":"1.0.0",   
+	"minimum-stability": "dev",  
 	"require": {
 		"php": ">=7.0"      
-	},
-	"conflict": {
-		"cchhyy0/idcimclass": "<1.0"
 	},
 	"autoload": {
 		"classmap": ["idcimclass"]
 	}
-
+   
 }     
