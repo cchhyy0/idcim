@@ -1,5 +1,5 @@
-[![Software license][ico-license]](LICENSE)
-[![Latest development][ico-version-dev]][link-packagist]
-[![Monthly installs][ico-downloads-monthly]][link-downloads]
-
------
+[![Downloads this Month](https://img.shields.io/packagist/dm/nette/utils.svg)](https://packagist.org/packages/nette/utils)
+[![Build Status](https://travis-ci.org/nette/utils.svg?branch=master)](https://travis-ci.org/nette/utils)
+[![Coverage Status](https://coveralls.io/repos/github/nette/utils/badge.svg?branch=master)](https://coveralls.io/github/nette/utils?branch=master)
+[![Latest Stable Version](https://poser.pugx.org/nette/utils/v/stable)](https://github.com/nette/utils/releases)
+[![License](https://img.shields.io/badge/license-New%20BSD-blue.svg)](https://github.com/nette/utils/blob/master/license.md)
