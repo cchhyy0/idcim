@@ -19,6 +19,12 @@
 	},
 	"autoload": {
 		"classmap": ["idcimclass"]
-	}
+	},
+	"repositories":[ 
+       { 
+           "type":"git", 
+           "url":"E:/localsvn/idcimLocalClass/idcim" 
+       }
+   ] 
 
 }     
